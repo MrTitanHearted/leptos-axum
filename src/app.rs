@@ -1,7 +1,7 @@
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
-use crate::pages::homepage::*;
+use crate::pages::*;
 
 #[component]
 pub fn App(cx: Scope) -> impl IntoView {
@@ -23,6 +23,7 @@ pub fn App(cx: Scope) -> impl IntoView {
             <main>
                 <Routes>
                     <Route path="" view=|cx| view! { cx, <HomePage/> }/>
+                    <Route path="/login" view=|cx| view! { cx, <LoginPage/> }/>
                 </Routes>
             </main>
         </Router>
