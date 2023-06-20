@@ -1,9 +1,11 @@
 use leptos::*;
+use crate::components::Navbar;
 
 #[component]
 pub fn LoginPage(cx: Scope) -> impl IntoView {
     view! { cx,
         <div class="static hero min-h-screen bg-base-200">
+            <Navbar />
             <div class="hero-content flex-col lg:flex-row-reverse">
                 <div class="text-center lg:text-left">
                 <h1 class="text-5xl font-bold">"Login now!"</h1>

@@ -1,4 +1,5 @@
 use leptos::*;
+use crate::components::Navbar;
 
 #[component]
 pub fn HomePage(cx: Scope) -> impl IntoView {
@@ -7,7 +8,8 @@ pub fn HomePage(cx: Scope) -> impl IntoView {
     let on_click = move |_| set_count.update(|count| *count += 1);
 
     view! { cx,
-        <div class="hero min-h-screen bg-base-200">
+        <div class="static hero min-h-screen bg-base-200">
+            <Navbar />
             <div class="hero-content flex-col lg:flex-row">
                 <img src="/images/ironman.png" class="max-w-sm rounded-lg shadow-2xl" />
                 <div>
